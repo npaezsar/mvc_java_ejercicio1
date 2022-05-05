@@ -11,9 +11,9 @@ public class PanelOperaciones extends JPanel
     //--------------------
     // Atributos
     //--------------------
-    private JButton btHallar;
-    private JButton btBorrar;
-    private JButton btSalir;
+    public JButton btHallar;
+    public JButton btBorrar;
+    public JButton btSalir;
 
     //--------------------
     // Métodos

@@ -47,7 +47,7 @@ public class Mayor2Enteros
         return mayor;
     }
 
-    public void hallarmayor()
+    public void hallarMayor()
     {
         if(x>y)
         {
