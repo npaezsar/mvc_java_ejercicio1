@@ -3,6 +3,7 @@ package vista;
 import java.awt.Color;
 
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -15,6 +16,8 @@ public class PanelEntradaDatos extends JPanel
     //--------------------
     private JLabel lX;
     private JLabel lY;
+    private JLabel lImagen;
+    private ImageIcon iImagen;
     private JTextField tfX;
     private JTextField tfY;
 
@@ -27,6 +30,12 @@ public class PanelEntradaDatos extends JPanel
     {
         this.setLayout(null);
         this.setBackground(Color.WHITE);
+
+        //Crear y agregar imagen
+        iImagen = new ImageIcon(getClass().getResource("mayor.png"));
+        lImagen = new JLabel(iImagen);
+        lImagen.setBounds(10,50,128,128);
+        this.add(lImagen);
 
         //Crear y agregar etiqueta X
         lX = new JLabel("X = ");
@@ -52,5 +61,23 @@ public class PanelEntradaDatos extends JPanel
         TitledBorder borde = BorderFactory.createTitledBorder("Datos de entrada");
         borde.setTitleColor(Color.BLUE);
         this.setBorder(borde);
+    }
+
+    // Métodos de acceso a la informacion
+    public String getTfX()
+    {
+        return tfX.getText();
+    }
+
+    public String getTfY()
+    {
+        return tfY.getText();
+    }
+
+    // Metodo borrar cajas de text
+    public void borrar()
+    {
+        tfX.setText("");
+        tfY.setText("");
     }
 }
